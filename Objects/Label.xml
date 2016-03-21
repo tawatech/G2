@@ -5,8 +5,8 @@
 	<ClickCommand></ClickCommand>
 	<DeclickCommand></DeclickCommand>
     <Variables>
-		<NumCount>5</NumCount>
-		<StringCount>1</StringCount>
+		<NumCount>6</NumCount>
+		<StringCount>2</StringCount>
 		<Parameter>
 			<Type>Number</Type>
 			<Index>0</Index>
@@ -26,10 +26,16 @@
 			<Default>Label</Default>
 		</Parameter>
 		<Parameter>
+			<Type>String</Type>
+			<Index>1</Index>
+			<Name>FontName</Name>
+			<Default>internal</Default>
+		</Parameter>
+		<Parameter>
 			<Type>Number</Type>
 			<Index>2</Index>
-			<Name>TextSize</Name>
-			<Default>10</Default>
+			<Name>TextEnlarge</Name>
+			<Default>0</Default>
 		</Parameter>
 		<Parameter>
 			<Type>Number</Type>
@@ -42,6 +48,12 @@
 			<Index>4</Index>
 			<Name>Background</Name>
 			<Default>#Screen_Background</Default>
+		</Parameter>
+		<Parameter>
+			<Type>Number</Type>
+			<Index>5</Index>
+			<Name>TextJustification</Name>
+			<Default>1</Default>
 		</Parameter>
 	</Variables>
     <DrawMethods>
@@ -58,7 +70,7 @@
 			<Index>1</Index>
 			<Text>
 				(drawFillRect,^Width,^Height,^Background
-				(drawCenteredText,^Width,^Height,^Text,^TextSize,^TextColor
+				(drawText,^Width,^Height,^Text,^TextEnlarge,^TextColor,^FontName,^TextJustification,^Background
 			</Text>
 		</Method>
 	</DrawMethods>

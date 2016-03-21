@@ -5,7 +5,7 @@
 	<ClickCommand></ClickCommand>
 	<DeclickCommand></DeclickCommand>
     <Variables>
-		<NumCount>6</NumCount>
+		<NumCount>7</NumCount>
 		<StringCount>0</StringCount>
 		<Parameter>
 			<Type>Number</Type>
@@ -43,6 +43,12 @@
 			<Name>Background</Name>
 			<Default>#Screen_Background</Default>
 		</Parameter>
+		<Parameter>
+			<Type>Number</Type>
+			<Index>6</Index>
+			<Name>Direction</Name>
+			<Default>0</Default>
+		</Parameter>
 	</Variables>
     <DrawMethods>
 		<MethodCount>2</MethodCount>
@@ -57,7 +63,7 @@
 			<Designator>Default</Designator>
 			<Index>1</Index>
 			<Text>
-				(drawLine,^Width,^Height,^LineColor
+				(drawLine,^Width,^Height,^LineColor,^Direction
 			</Text>
 		</Method>
 	</DrawMethods>

@@ -20,14 +20,13 @@ class G2bAdaFruitRA8875_800x480 {
   boolean touched(void);
   boolean touchRead(uint16_t *x, uint16_t *y);
 
-
+  void    DrawCircle(int16_t XCen,int16_t YCen,int16_t Radius,uint16_t Color);
   void    DrawFillRect(int16_t XPos,int16_t YPos,int16_t Width,int16_t Height,uint16_t Background);
-  void    DrawRoundedFilledRectangle(int16_t XPos,int16_t YPos,int16_t Width,int16_t Height,int16_t CornerRadius,uint16_t ButtonColor);
-  void    DrawRoundedRect(int16_t XPos,int16_t YPos,int16_t Width,int16_t Height,int16_t CornerRadius,uint16_t ButtonBorder);
+  void    DrawFillCircle(int16_t XCen,int16_t YCen,int16_t Radius,uint16_t Color);
+  void    DrawRoundedFilledRectangle(int16_t XPos,int16_t YPos,int16_t Width,int16_t Height,int16_t CornerRadius,uint16_t ButtonColor, uint16_t CornersToSkip = 0);
+  void    DrawRoundedRect(int16_t XPos,int16_t YPos,int16_t Width,int16_t Height,int16_t CornerRadius,uint16_t ButtonBorder, uint16_t CornersToSkip = 0);
   void    DrawCenteredText(int16_t XPos,int16_t YPos,int16_t Width,int16_t Height,String Text,int16_t TextSize,uint16_t TextColor);
-  void	  DrawFillCircle(int16_t XPos, int16_t YPos, int16_t Radius, uint16_t Color);
-  void	  DrawCircle(int16_t XPos, int16_t YPos, int16_t Radius, uint16_t Color);
-  void    DrawLine(int16_t x0, int16_t y0, int16_t x1, int16_t y1, uint16_t Color);
+ 
 };
 
 #endif

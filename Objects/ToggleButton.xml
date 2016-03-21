@@ -5,8 +5,26 @@
 	<ClickCommand>@@.ObjectState=@@.ObjectState%2+1;@@.drawByState();</ClickCommand>
 	<DeclickCommand></DeclickCommand>
     <Variables>
-		<NumCount>11</NumCount>
-		<StringCount>2</StringCount>
+		<NumCount>12</NumCount>
+		<StringCount>3</StringCount>
+		<Parameter>
+			<Type>String</Type>
+			<Index>0</Index>
+			<Name>Unpressed_Text</Name>
+			<Default>TGL OFF</Default>
+		</Parameter>
+		<Parameter>
+			<Type>String</Type>
+			<Index>1</Index>
+			<Name>Pressed_Text</Name>
+			<Default>TGL ON</Default>
+		</Parameter>
+		<Parameter>
+			<Type>String</Type>
+			<Index>2</Index>
+			<Name>FontName</Name>
+			<Default>internal</Default>
+		</Parameter>
 		<Parameter>
 			<Type>Number</Type>
 			<Index>0</Index>
@@ -36,24 +54,12 @@
 			<Index>4</Index>
 			<Name>ButtonBorder</Name>
 			<Default>#ItemSecondary</Default>
-		</Parameter>
-		<Parameter>
-			<Type>String</Type>
-			<Index>0</Index>
-			<Name>Unpressed_Text</Name>
-			<Default>TGL OFF</Default>
-		</Parameter>
-		<Parameter>
-			<Type>String</Type>
-			<Index>1</Index>
-			<Name>Pressed_Text</Name>
-			<Default>TGL ON</Default>
-		</Parameter>
+		</Parameter>		
 		<Parameter>
 			<Type>Number</Type>
 			<Index>5</Index>
-			<Name>TextSize</Name>
-			<Default>10</Default>
+			<Name>TextEnlarge</Name>
+			<Default>0</Default>
 		</Parameter>
 		<Parameter>
 			<Type>Number</Type>
@@ -85,6 +91,12 @@
 			<Name>Background</Name>
 			<Default>#Screen_Background</Default>
 		</Parameter>
+		<Parameter>
+			<Type>Number</Type>
+			<Index>11</Index>
+			<Name>TextJustification</Name>
+			<Default>1</Default>
+		</Parameter>
 	</Variables>
     <DrawMethods>
 		<MethodCount>3</MethodCount>
@@ -101,7 +113,7 @@
 			<Text>
 				(drawRoundedFillRect,^Width,^Height,^CornerRadius,^ButtonColor
 				(drawRoundedRect,^Width,^Height,^CornerRadius,^ButtonBorder
-				(drawCenteredText,^Width,^Height,^Unpressed_Text,^TextSize,^TextColor
+				(drawText,^Width,^Height,^Unpressed_Text,^TextEnlarge,^TextColor,^FontName,^TextJustification,^ButtonColor
 			</Text>
 		</Method>
 		<Method>
@@ -110,7 +122,7 @@
 			<Text>
 				(drawRoundedFillRect,^Width,^Height,^CornerRadius,^PressedButtonColor
 				(drawRoundedRect,^Width,^Height,^CornerRadius,^PressedBorderColor
-				(drawCenteredText,^Width,^Height,^Pressed_Text,^TextSize,^PressedTextColor
+				(drawText,^Width,^Height,^Pressed_Text,^TextEnlarge,^PressedTextColor,^FontName,^TextJustification,^PressedButtonColor
 			</Text>
 		</Method>
 	</DrawMethods>

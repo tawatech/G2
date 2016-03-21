@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HardwareConfig>
+    <BridgeLibPath>C:/Users/John/Documents/QT Projects/build-GUImetaprogrammer-Desktop_Qt_5_5_0_MinGW_32bit-Release/release/BridgeLibs/G2BsumotoyRA8875_800x480</BridgeLibPath>
+    <SP1X>80</SP1X>
+    <SP1Y>48</SP1Y>
+    <SP2X>400</SP2X>
+    <SP2Y>432</SP2Y>
+    <SP3X>720</SP3X>
+    <SP3Y>240</SP3Y>
+    <TP1X>893</TP1X>
+    <TP1Y>845</TP1Y>
+    <TP2X>533</TP2X>
+    <TP2Y>163</TP2Y>
+    <TP3X>164</TP3X>
+    <TP3Y>501</TP3Y>
+    <ScreenWidth>800</ScreenWidth>
+    <ScreenHeight>480</ScreenHeight>
+</HardwareConfig>

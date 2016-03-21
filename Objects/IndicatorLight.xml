@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Object>
-    <Name>Radio_Button</Name>
-    <Category>Input</Category>
-	<ClickCommand>@@.ObjectState=@@.ObjectState%2+1;@@.drawByState();</ClickCommand>
+    <Name>Indicator_Light</Name>
+    <Category>Output</Category>
+	<ClickCommand></ClickCommand>
 	<DeclickCommand></DeclickCommand>
     <Variables>
 		<NumCount>5</NumCount>
@@ -11,26 +11,26 @@
 			<Type>Number</Type>
 			<Index>0</Index>
 			<Name>Width</Name>
-			<Default>28</Default>
+			<Default>20</Default>
 		</Parameter>
 		<Parameter>
 			<Type>Number</Type>
 			<Index>1</Index>
 			<Name>Height</Name>
-			<Default>28</Default>
+			<Default>20</Default>
 		</Parameter>
 		<Parameter>
 			<Type>Number</Type>
 			<Index>2</Index>
-			<Name>CircleColor</Name>
-			<Default>#ItemPrimary</Default>
+			<Name>OnColor</Name>
+			<Default>21824</Default>
 		</Parameter>
 		<Parameter>
 			<Type>Number</Type>
 			<Index>3</Index>
-			<Name>OnCircleColor</Name>
-			<Default>#ItemSelectedPrimary</Default>
-		</Parameter>		
+			<Name>OffColor</Name>
+			<Default>63488</Default>
+		</Parameter>	
 		<Parameter>
 			<Type>Number</Type>
 			<Index>4</Index>
@@ -44,22 +44,21 @@
 			<Designator>Clear</Designator>
 			<Index>0</Index>
 			<Text>
-				(drawFillRect,^Width+2,^Height+2,^Background
+				(drawFillCircle,^Width /2,^Background
 			</Text>
 		</Method>
 		<Method>
-			<Designator>Default</Designator>
+			<Designator>On</Designator>
 			<Index>1</Index>
 			<Text>
-				(drawFillCircle,^Width /2,^CircleColor
+				(drawFillCircle,^Width /2,^OnColor
 			</Text>
 		</Method>
 		<Method>
-			<Designator>Pressed</Designator>
+			<Designator>Off</Designator>
 			<Index>2</Index>
 			<Text>
-				(drawFillCircle,^Width /2,^CircleColor
-				(drawFillCircle,^Width /4,^OnCircleColor,^Width /4,^Height /4
+				(drawFillCircle,^Width /2,^OffColor
 			</Text>
 		</Method>
 	</DrawMethods>

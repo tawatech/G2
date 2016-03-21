@@ -35,14 +35,82 @@ void    G2bAdaFruitRA8875_480x272::DrawFillRect(int16_t XPos,int16_t YPos,int16_
   AdaTFT->fillRect(XPos, YPos, Width, Height, Background);
 }
 
-void    G2bAdaFruitRA8875_480x272::DrawRoundedFilledRectangle(int16_t XPos,int16_t YPos,int16_t Width,int16_t Height,int16_t CornerRadius,uint16_t ButtonColor)
+void    G2bAdaFruitRA8875_480x272::DrawCircle(int16_t XCen,int16_t YCen,int16_t Radius,uint16_t Color)
 {
-  AdaTFT->fillRoundRect(XPos, YPos, Width, Height, CornerRadius, ButtonColor);
+  AdaTFT->drawCircle(XCen+1, YCen+1, Radius, Color);
 }
 
-void    G2bAdaFruitRA8875_480x272::DrawRoundedRect(int16_t XPos,int16_t YPos,int16_t Width,int16_t Height,int16_t CornerRadius,uint16_t ButtonBorder)
+void    G2bAdaFruitRA8875_480x272::DrawFillCircle(int16_t XCen,int16_t YCen,int16_t Radius,uint16_t Color)
 {
-  AdaTFT->drawRoundRect(XPos, YPos, Width, Height+1, CornerRadius, ButtonBorder);
+  AdaTFT->fillCircle(XCen+1, YCen+1, Radius, Color);
+}
+
+void    G2bAdaFruitRA8875_480x272::DrawRoundedFilledRectangle(int16_t XPos,int16_t YPos,int16_t Width,int16_t Height,int16_t CornerRadius,uint16_t ButtonColor,uint16_t CornersToSkip)
+{
+    //always draw the fully rounded version, then just fill in the squared corners
+    AdaTFT->fillRoundRect(XPos, YPos, Width, Height, CornerRadius, ButtonColor);
+
+    if (CornersToSkip&1)  //top left
+      AdaTFT->fillRect(XPos  , YPos    , CornerRadius, CornerRadius,ButtonColor);
+    if (CornersToSkip&2)  //top right
+      AdaTFT->fillRect(XPos+CornerRadius  , YPos    , Width-CornerRadius-1,CornerRadius, ButtonColor);
+    if (CornersToSkip&4)  //bottom right
+      AdaTFT->fillRect(XPos+CornerRadius  , YPos +CornerRadius   , Width-CornerRadius-1, Height-CornerRadius, ButtonColor);
+    if (CornersToSkip&8)  //bottom left
+      AdaTFT->fillRect(XPos , YPos +CornerRadius, CornerRadius, Height-CornerRadius, ButtonColor);
+}
+
+void    G2bAdaFruitRA8875_480x272::DrawRoundedRect(int16_t XPos,int16_t YPos,int16_t Width,int16_t Height,int16_t CornerRadius,uint16_t ButtonBorder,uint16_t CornersToSkip)
+{
+  if (CornersToSkip==0)
+    AdaTFT->drawRoundRect(XPos, YPos, Width, Height, CornerRadius, ButtonBorder);
+  else
+  {
+      //draw in lines from rounded corner to rounded corner
+      AdaTFT->drawFastHLine(XPos+CornerRadius  , YPos    , Width-2*CornerRadius, ButtonBorder); // Top
+      AdaTFT->drawFastHLine(XPos+CornerRadius  , YPos+Height-1, Width-2*CornerRadius, ButtonBorder); // Bottom
+      AdaTFT->drawFastVLine(XPos    , YPos+CornerRadius  , Height-2*CornerRadius, ButtonBorder); // Left
+      AdaTFT->drawFastVLine(XPos+Width-1, YPos+CornerRadius  , Height-2*CornerRadius, ButtonBorder); // Right
+      if (CornersToSkip&1)  //top left
+      {
+        AdaTFT->drawFastHLine(XPos  , YPos    , CornerRadius, ButtonBorder); // Top
+        AdaTFT->drawFastVLine(XPos, YPos  , Height-CornerRadius-1, ButtonBorder); // Left
+      }
+      else
+      {
+        AdaTFT->drawCircleHelper(XPos+CornerRadius, YPos+CornerRadius    , CornerRadius, 1, ButtonBorder);
+      }
+      
+      if (CornersToSkip&2)  //top right
+      {
+        AdaTFT->drawFastHLine(XPos+CornerRadius  , YPos    , Width-CornerRadius-1, ButtonBorder); // Top
+        AdaTFT->drawFastVLine(XPos+Width-1, YPos  , Height-CornerRadius-1, ButtonBorder); // Right
+      }
+      else
+      {
+        AdaTFT->drawCircleHelper(XPos+Width-CornerRadius-1, YPos+CornerRadius    , CornerRadius, 2, ButtonBorder);
+      }
+
+      if (CornersToSkip&4)  //bottom right
+      {
+        AdaTFT->drawFastHLine(XPos+CornerRadius  , YPos +Height   , Width-CornerRadius-1, ButtonBorder); // Bottom
+        AdaTFT->drawFastVLine(XPos+Width-1, YPos +CornerRadius, Height-CornerRadius-1, ButtonBorder); // Right
+      }
+      else
+      {
+        AdaTFT->drawCircleHelper(XPos+Width-CornerRadius-1, YPos+Height-CornerRadius-1    , CornerRadius, 4, ButtonBorder);
+      }
+
+      if (CornersToSkip&8)  //bottom left
+      {
+        AdaTFT->drawFastHLine(XPos , YPos +Height, Width-CornerRadius-1, ButtonBorder); // Bottom
+        AdaTFT->drawFastVLine(XPos, YPos +CornerRadius, Height-CornerRadius-1, ButtonBorder); // Left
+      }
+      else
+      {
+        AdaTFT->drawCircleHelper(XPos+CornerRadius, YPos+Height-CornerRadius-1    , CornerRadius, 8, ButtonBorder);
+      }
+  }
 }
 
 void    G2bAdaFruitRA8875_480x272::DrawCenteredText(int16_t XPos,int16_t YPos,int16_t Width,int16_t Height,String Text,int16_t TextSize,uint16_t TextColor)
@@ -62,19 +130,4 @@ void    G2bAdaFruitRA8875_480x272::DrawCenteredText(int16_t XPos,int16_t YPos,in
   AdaTFT->textWrite(buf, Text.length()+1);
   AdaTFT->textEnlarge(0);
   AdaTFT->graphicsMode();
-}
-
-void	  G2bAdaFruitRA8875_480x272::DrawFillCircle(int16_t XPos, int16_t YPos, int16_t Radius, uint16_t Color)
-{
-	AdaTFT->fillCircle(XPos, YPos, Radius, Color);
-}
-
-void	  G2bAdaFruitRA8875_480x272::DrawCircle(int16_t XPos, int16_t YPos, int16_t Radius, uint16_t Color)
-{
-	AdaTFT->drawCircle(XPos, YPos, Radius, Color);
-}
-
-void    G2bAdaFruitRA8875_480x272::DrawLine(int16_t x0, int16_t y0, int16_t x1, int16_t y1, uint16_t Color)
-{
-	AdaTFT->drawLine(x0, y0, x1, y1, Color);
 }

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HardwareConfig>
+    <BridgeLibPath>C:/Users/John/Documents/QT Projects/build-GUImetaprogrammer-Desktop_Qt_5_5_0_MinGW_32bit-Release/release/BridgeLibs/G2bAdaFruitRA8875_480x272</BridgeLibPath>
+    <SP1X>48</SP1X>
+    <SP1Y>27</SP1Y>
+    <SP2X>240</SP2X>
+    <SP2Y>245</SP2Y>
+    <SP3X>432</SP3X>
+    <SP3Y>136</SP3Y>
+    <TP1X>881</TP1X>
+    <TP1Y>805</TP1Y>
+    <TP2X>519</TP2X>
+    <TP2Y>175</TP2Y>
+    <TP3X>160</TP3X>
+    <TP3Y>507</TP3Y>
+    <ScreenWidth>480</ScreenWidth>
+    <ScreenHeight>272</ScreenHeight>
+</HardwareConfig>

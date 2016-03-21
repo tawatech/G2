@@ -63,10 +63,8 @@
 			<Designator>Default</Designator>
 			<Index>1</Index>
 			<Text>
-				(drawFillRect,^Width,^Height,^Background
 				(drawRoundedFillRect,^Width,^LineHeight,0,^UnFillColor,0,( ^Height - ^LineHeight ) /2
 				(drawRoundedFillRect,( ^Width * ^FillPercentage )/100,^LineHeight,0,^FillColor,0,( ^Height - ^LineHeight ) /2
-				(drawFillCircle,^Height /2,^FillColor,(( ^Width - ^Height ) * ^FillPercentage )/100,0
 			</Text>
 		</Method>
 	</DrawMethods>
