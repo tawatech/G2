@@ -1,0 +1,500 @@
+<!DOCTYPE XMLout>
+<G2Project>
+ <ProjectName>smallTouchCalibration</ProjectName>
+ <ProjectPath>C:/Users/John/Documents/QT Projects/build-GUImetaprogrammer-Desktop_Qt_5_5_0_MinGW_32bit-Release/release/Projects/Touch Calibration/480x272</ProjectPath>
+ <GenerationPath>C:/Users/John/Documents/QT Projects/build-GUImetaprogrammer-Desktop_Qt_5_5_0_MinGW_32bit-Release/release/Projects/Touch Calibration/480x272/smallTouchCalibrator</GenerationPath>
+ <AllObjects>
+  <Object>
+   <Name>Indicator_Light</Name>
+   <Category>Output</Category>
+   <NumCount>6</NumCount>
+   <StringCount>0</StringCount>
+   <NumericalVars>
+    <Width>16</Width>
+    <Height>16</Height>
+    <OnColor>21824</OnColor>
+    <OffColor>63488</OffColor>
+    <DisabledColor>65504</DisabledColor>
+    <Background>65535</Background>
+   </NumericalVars>
+   <StringVars/>
+   <ObjectState>2</ObjectState>
+   <UName>Indicator_Light_1</UName>
+   <ClickCommand></ClickCommand>
+   <DeclickCommand></DeclickCommand>
+   <UID>1</UID>
+   <XPos>32</XPos>
+   <YPos>32</YPos>
+   <ClickWidth>0</ClickWidth>
+   <ClickHeight>0</ClickHeight>
+   <Visible>True</Visible>
+   <conversionFinished>False</conversionFinished>
+   <MethodCount>4</MethodCount>
+   <DrawMethods>
+    <Clear>
+(drawFillCircle,^Width /2,^Background
+</Clear>
+    <On>
+(drawFillCircle,^Width /2,^OnColor
+</On>
+    <Off>
+(drawFillCircle,^Width /2,^OffColor
+</Off>
+    <Disabled>
+(drawFillCircle,^Width /2,^DisabledColor
+</Disabled>
+   </DrawMethods>
+  </Object>
+  <Object>
+   <Name>Indicator_Light</Name>
+   <Category>Output</Category>
+   <NumCount>6</NumCount>
+   <StringCount>0</StringCount>
+   <NumericalVars>
+    <Width>16</Width>
+    <Height>16</Height>
+    <OnColor>21824</OnColor>
+    <OffColor>63488</OffColor>
+    <DisabledColor>65504</DisabledColor>
+    <Background>65535</Background>
+   </NumericalVars>
+   <StringVars/>
+   <ObjectState>2</ObjectState>
+   <UName>Indicator_Light_2</UName>
+   <ClickCommand></ClickCommand>
+   <DeclickCommand></DeclickCommand>
+   <UID>2</UID>
+   <XPos>232</XPos>
+   <YPos>234</YPos>
+   <ClickWidth>0</ClickWidth>
+   <ClickHeight>0</ClickHeight>
+   <Visible>True</Visible>
+   <conversionFinished>False</conversionFinished>
+   <MethodCount>4</MethodCount>
+   <DrawMethods>
+    <Clear>
+(drawFillCircle,^Width /2,^Background
+</Clear>
+    <On>
+(drawFillCircle,^Width /2,^OnColor
+</On>
+    <Off>
+(drawFillCircle,^Width /2,^OffColor
+</Off>
+    <Disabled>
+(drawFillCircle,^Width /2,^DisabledColor
+</Disabled>
+   </DrawMethods>
+  </Object>
+  <Object>
+   <Name>Indicator_Light</Name>
+   <Category>Output</Category>
+   <NumCount>6</NumCount>
+   <StringCount>0</StringCount>
+   <NumericalVars>
+    <Width>16</Width>
+    <Height>16</Height>
+    <OnColor>21824</OnColor>
+    <OffColor>63488</OffColor>
+    <DisabledColor>65504</DisabledColor>
+    <Background>65535</Background>
+   </NumericalVars>
+   <StringVars/>
+   <ObjectState>2</ObjectState>
+   <UName>Indicator_Light_3</UName>
+   <ClickCommand></ClickCommand>
+   <DeclickCommand></DeclickCommand>
+   <UID>3</UID>
+   <XPos>442</XPos>
+   <YPos>128</YPos>
+   <ClickWidth>0</ClickWidth>
+   <ClickHeight>0</ClickHeight>
+   <Visible>True</Visible>
+   <conversionFinished>False</conversionFinished>
+   <MethodCount>4</MethodCount>
+   <DrawMethods>
+    <Clear>
+(drawFillCircle,^Width /2,^Background
+</Clear>
+    <On>
+(drawFillCircle,^Width /2,^OnColor
+</On>
+    <Off>
+(drawFillCircle,^Width /2,^OffColor
+</Off>
+    <Disabled>
+(drawFillCircle,^Width /2,^DisabledColor
+</Disabled>
+   </DrawMethods>
+  </Object>
+  <Object>
+   <Name>Label</Name>
+   <Category>Output</Category>
+   <NumCount>6</NumCount>
+   <StringCount>2</StringCount>
+   <NumericalVars>
+    <Width>100</Width>
+    <Height>24</Height>
+    <TextEnlarge>0</TextEnlarge>
+    <TextColor>0</TextColor>
+    <Background>65535</Background>
+    <TextJustification>1</TextJustification>
+   </NumericalVars>
+   <StringVars>
+    <Text>Screen Point</Text>
+    <FontName>internal</FontName>
+   </StringVars>
+   <ObjectState>1</ObjectState>
+   <UName>LblPt1</UName>
+   <ClickCommand></ClickCommand>
+   <DeclickCommand></DeclickCommand>
+   <UID>4</UID>
+   <XPos>5</XPos>
+   <YPos>80</YPos>
+   <ClickWidth>0</ClickWidth>
+   <ClickHeight>0</ClickHeight>
+   <Visible>True</Visible>
+   <conversionFinished>False</conversionFinished>
+   <MethodCount>2</MethodCount>
+   <DrawMethods>
+    <Clear>
+(drawFillRect,^Width,^Height,^Background
+</Clear>
+    <Default>
+(drawFillRect,^Width,^Height,^Background
+(drawText,^Width,^Height,^Text,^TextEnlarge,^TextColor,^FontName,^TextJustification,^Background
+</Default>
+   </DrawMethods>
+  </Object>
+  <Object>
+   <Name>Label</Name>
+   <Category>Output</Category>
+   <NumCount>6</NumCount>
+   <StringCount>2</StringCount>
+   <NumericalVars>
+    <Width>100</Width>
+    <Height>24</Height>
+    <TextEnlarge>0</TextEnlarge>
+    <TextColor>0</TextColor>
+    <Background>65535</Background>
+    <TextJustification>1</TextJustification>
+   </NumericalVars>
+   <StringVars>
+    <Text>Screen Point</Text>
+    <FontName>internal</FontName>
+   </StringVars>
+   <ObjectState>1</ObjectState>
+   <UName>LblPt2</UName>
+   <ClickCommand></ClickCommand>
+   <DeclickCommand></DeclickCommand>
+   <UID>5</UID>
+   <XPos>185</XPos>
+   <YPos>178</YPos>
+   <ClickWidth>0</ClickWidth>
+   <ClickHeight>0</ClickHeight>
+   <Visible>True</Visible>
+   <conversionFinished>False</conversionFinished>
+   <MethodCount>2</MethodCount>
+   <DrawMethods>
+    <Clear>
+(drawFillRect,^Width,^Height,^Background
+</Clear>
+    <Default>
+(drawFillRect,^Width,^Height,^Background
+(drawText,^Width,^Height,^Text,^TextEnlarge,^TextColor,^FontName,^TextJustification,^Background
+</Default>
+   </DrawMethods>
+  </Object>
+  <Object>
+   <Name>Label</Name>
+   <Category>Output</Category>
+   <NumCount>6</NumCount>
+   <StringCount>2</StringCount>
+   <NumericalVars>
+    <Width>100</Width>
+    <Height>24</Height>
+    <TextEnlarge>0</TextEnlarge>
+    <TextColor>0</TextColor>
+    <Background>65535</Background>
+    <TextJustification>1</TextJustification>
+   </NumericalVars>
+   <StringVars>
+    <Text>Screen Point</Text>
+    <FontName>internal</FontName>
+   </StringVars>
+   <ObjectState>1</ObjectState>
+   <UName>LblPt3</UName>
+   <ClickCommand></ClickCommand>
+   <DeclickCommand></DeclickCommand>
+   <UID>6</UID>
+   <XPos>375</XPos>
+   <YPos>149</YPos>
+   <ClickWidth>0</ClickWidth>
+   <ClickHeight>0</ClickHeight>
+   <Visible>True</Visible>
+   <conversionFinished>False</conversionFinished>
+   <MethodCount>2</MethodCount>
+   <DrawMethods>
+    <Clear>
+(drawFillRect,^Width,^Height,^Background
+</Clear>
+    <Default>
+(drawFillRect,^Width,^Height,^Background
+(drawText,^Width,^Height,^Text,^TextEnlarge,^TextColor,^FontName,^TextJustification,^Background
+</Default>
+   </DrawMethods>
+  </Object>
+  <Object>
+   <Name>Label</Name>
+   <Category>Output</Category>
+   <NumCount>6</NumCount>
+   <StringCount>2</StringCount>
+   <NumericalVars>
+    <Width>100</Width>
+    <Height>24</Height>
+    <TextEnlarge>0</TextEnlarge>
+    <TextColor>0</TextColor>
+    <Background>65535</Background>
+    <TextJustification>1</TextJustification>
+   </NumericalVars>
+   <StringVars>
+    <Text>Touch Point</Text>
+    <FontName>internal</FontName>
+   </StringVars>
+   <ObjectState>1</ObjectState>
+   <UName>LblTp1</UName>
+   <ClickCommand></ClickCommand>
+   <DeclickCommand></DeclickCommand>
+   <UID>9</UID>
+   <XPos>4</XPos>
+   <YPos>104</YPos>
+   <ClickWidth>100</ClickWidth>
+   <ClickHeight>24</ClickHeight>
+   <Visible>True</Visible>
+   <conversionFinished>False</conversionFinished>
+   <MethodCount>2</MethodCount>
+   <DrawMethods>
+    <Clear>
+(drawFillRect,^Width,^Height,^Background
+</Clear>
+    <Default>
+(drawFillRect,^Width,^Height,^Background
+(drawText,^Width,^Height,^Text,^TextEnlarge,^TextColor,^FontName,^TextJustification,^Background
+</Default>
+   </DrawMethods>
+  </Object>
+  <Object>
+   <Name>Label</Name>
+   <Category>Output</Category>
+   <NumCount>6</NumCount>
+   <StringCount>2</StringCount>
+   <NumericalVars>
+    <Width>100</Width>
+    <Height>24</Height>
+    <TextEnlarge>0</TextEnlarge>
+    <TextColor>0</TextColor>
+    <Background>65535</Background>
+    <TextJustification>1</TextJustification>
+   </NumericalVars>
+   <StringVars>
+    <Text>Touch Point</Text>
+    <FontName>internal</FontName>
+   </StringVars>
+   <ObjectState>1</ObjectState>
+   <UName>LblTp2</UName>
+   <ClickCommand></ClickCommand>
+   <DeclickCommand></DeclickCommand>
+   <UID>10</UID>
+   <XPos>183</XPos>
+   <YPos>201</YPos>
+   <ClickWidth>100</ClickWidth>
+   <ClickHeight>24</ClickHeight>
+   <Visible>True</Visible>
+   <conversionFinished>False</conversionFinished>
+   <MethodCount>2</MethodCount>
+   <DrawMethods>
+    <Clear>
+(drawFillRect,^Width,^Height,^Background
+</Clear>
+    <Default>
+(drawFillRect,^Width,^Height,^Background
+(drawText,^Width,^Height,^Text,^TextEnlarge,^TextColor,^FontName,^TextJustification,^Background
+</Default>
+   </DrawMethods>
+  </Object>
+  <Object>
+   <Name>Label</Name>
+   <Category>Output</Category>
+   <NumCount>6</NumCount>
+   <StringCount>2</StringCount>
+   <NumericalVars>
+    <Width>100</Width>
+    <Height>24</Height>
+    <TextEnlarge>0</TextEnlarge>
+    <TextColor>0</TextColor>
+    <Background>65535</Background>
+    <TextJustification>1</TextJustification>
+   </NumericalVars>
+   <StringVars>
+    <Text>Touch Point</Text>
+    <FontName>internal</FontName>
+   </StringVars>
+   <ObjectState>1</ObjectState>
+   <UName>LblTp3</UName>
+   <ClickCommand></ClickCommand>
+   <DeclickCommand></DeclickCommand>
+   <UID>11</UID>
+   <XPos>375</XPos>
+   <YPos>176</YPos>
+   <ClickWidth>100</ClickWidth>
+   <ClickHeight>24</ClickHeight>
+   <Visible>True</Visible>
+   <conversionFinished>False</conversionFinished>
+   <MethodCount>2</MethodCount>
+   <DrawMethods>
+    <Clear>
+(drawFillRect,^Width,^Height,^Background
+</Clear>
+    <Default>
+(drawFillRect,^Width,^Height,^Background
+(drawText,^Width,^Height,^Text,^TextEnlarge,^TextColor,^FontName,^TextJustification,^Background
+</Default>
+   </DrawMethods>
+  </Object>
+  <Object>
+   <Name>Label</Name>
+   <Category>Output</Category>
+   <NumCount>6</NumCount>
+   <StringCount>2</StringCount>
+   <NumericalVars>
+    <Width>400</Width>
+    <Height>24</Height>
+    <TextEnlarge>0</TextEnlarge>
+    <TextColor>0</TextColor>
+    <Background>65535</Background>
+    <TextJustification>1</TextJustification>
+   </NumericalVars>
+   <StringVars>
+    <Text>Tap Dots as they turn Yellow</Text>
+    <FontName>internal</FontName>
+   </StringVars>
+   <ObjectState>1</ObjectState>
+   <UName>Label_12</UName>
+   <ClickCommand></ClickCommand>
+   <DeclickCommand></DeclickCommand>
+   <UID>12</UID>
+   <XPos>72</XPos>
+   <YPos>7</YPos>
+   <ClickWidth>0</ClickWidth>
+   <ClickHeight>0</ClickHeight>
+   <Visible>True</Visible>
+   <conversionFinished>False</conversionFinished>
+   <MethodCount>2</MethodCount>
+   <DrawMethods>
+    <Clear>
+(drawFillRect,^Width,^Height,^Background
+</Clear>
+    <Default>
+(drawFillRect,^Width,^Height,^Background
+(drawText,^Width,^Height,^Text,^TextEnlarge,^TextColor,^FontName,^TextJustification,^Background
+</Default>
+   </DrawMethods>
+  </Object>
+  <Object>
+   <Name>Label</Name>
+   <Category>Output</Category>
+   <NumCount>6</NumCount>
+   <StringCount>2</StringCount>
+   <NumericalVars>
+    <Width>400</Width>
+    <Height>24</Height>
+    <TextEnlarge>0</TextEnlarge>
+    <TextColor>0</TextColor>
+    <Background>65535</Background>
+    <TextJustification>1</TextJustification>
+   </NumericalVars>
+   <StringVars>
+    <Text>Tap screen to begin or repeat</Text>
+    <FontName>internal</FontName>
+   </StringVars>
+   <ObjectState>1</ObjectState>
+   <UName>Label_13</UName>
+   <ClickCommand></ClickCommand>
+   <DeclickCommand></DeclickCommand>
+   <UID>13</UID>
+   <XPos>72</XPos>
+   <YPos>33</YPos>
+   <ClickWidth>0</ClickWidth>
+   <ClickHeight>0</ClickHeight>
+   <Visible>True</Visible>
+   <conversionFinished>False</conversionFinished>
+   <MethodCount>2</MethodCount>
+   <DrawMethods>
+    <Clear>
+(drawFillRect,^Width,^Height,^Background
+</Clear>
+    <Default>
+(drawFillRect,^Width,^Height,^Background
+(drawText,^Width,^Height,^Text,^TextEnlarge,^TextColor,^FontName,^TextJustification,^Background
+</Default>
+   </DrawMethods>
+  </Object>
+  <Object>
+   <Name>Label</Name>
+   <Category>Output</Category>
+   <NumCount>6</NumCount>
+   <StringCount>2</StringCount>
+   <NumericalVars>
+    <Width>400</Width>
+    <Height>24</Height>
+    <TextEnlarge>0</TextEnlarge>
+    <TextColor>0</TextColor>
+    <Background>65535</Background>
+    <TextJustification>1</TextJustification>
+   </NumericalVars>
+   <StringVars>
+    <Text>Enter data into G2 hardware configuration and save</Text>
+    <FontName>internal</FontName>
+   </StringVars>
+   <ObjectState>1</ObjectState>
+   <UName>Label_14</UName>
+   <ClickCommand></ClickCommand>
+   <DeclickCommand></DeclickCommand>
+   <UID>14</UID>
+   <XPos>76</XPos>
+   <YPos>57</YPos>
+   <ClickWidth>100</ClickWidth>
+   <ClickHeight>24</ClickHeight>
+   <Visible>True</Visible>
+   <conversionFinished>False</conversionFinished>
+   <MethodCount>2</MethodCount>
+   <DrawMethods>
+    <Clear>
+(drawFillRect,^Width,^Height,^Background
+</Clear>
+    <Default>
+(drawFillRect,^Width,^Height,^Background
+(drawText,^Width,^Height,^Text,^TextEnlarge,^TextColor,^FontName,^TextJustification,^Background
+</Default>
+   </DrawMethods>
+  </Object>
+ </AllObjects>
+ <DisplayTree>
+  <Window>
+   <Name>Default</Name>
+   <Obj>Indicator_Light_1</Obj>
+   <Obj>Indicator_Light_2</Obj>
+   <Obj>Indicator_Light_3</Obj>
+   <Obj>LblPt1</Obj>
+   <Obj>LblPt2</Obj>
+   <Obj>LblPt3</Obj>
+   <Obj>LblTp1</Obj>
+   <Obj>LblTp2</Obj>
+   <Obj>LblTp3</Obj>
+   <Obj>Label_12</Obj>
+   <Obj>Label_13</Obj>
+   <Obj>Label_14</Obj>
+  </Window>
+ </DisplayTree>
+</G2Project>
+

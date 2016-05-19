@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <HardwareConfig>
-    <BridgeLibPath>C:/Users/John/Documents/QT Projects/build-GUImetaprogrammer-Desktop_Qt_5_5_0_MinGW_32bit-Release/release/BridgeLibs/G2BsumotoyRA8875_800x480</BridgeLibPath>
+    <BridgeLibPath>C:/Users/John/Documents/QT Projects/build-GUImetaprogrammer-Desktop_Qt_5_5_0_MinGW_32bit-Release/release/BridgeLibs/G2BsumotoyRA8875</BridgeLibPath>
     <SP1X>80</SP1X>
     <SP1Y>48</SP1Y>
     <SP2X>400</SP2X>

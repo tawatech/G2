@@ -7,12 +7,12 @@
     <SP2Y>432</SP2Y>
     <SP3X>720</SP3X>
     <SP3Y>240</SP3Y>
-    <TP1X>893</TP1X>
-    <TP1Y>845</TP1Y>
-    <TP2X>533</TP2X>
-    <TP2Y>163</TP2Y>
-    <TP3X>164</TP3X>
-    <TP3Y>501</TP3Y>
+    <TP1X>171</TP1X>
+    <TP1Y>197</TP1Y>
+    <TP2X>536</TP2X>
+    <TP2Y>884</TP2Y>
+    <TP3X>878</TP3X>
+    <TP3Y>536</TP3Y>
     <ScreenWidth>800</ScreenWidth>
     <ScreenHeight>480</ScreenHeight>
 </HardwareConfig>

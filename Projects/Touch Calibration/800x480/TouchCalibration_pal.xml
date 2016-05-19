@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Palette>
-    <Screen_Background>-2105377</Screen_Background>
-    <Text_Color>16777215</Text_Color>
+    <Screen_Background>-1</Screen_Background>
+    <Text_Color>-16777216</Text_Color>
     <Highlighted_Text>8421504</Highlighted_Text>
     <Item_Primary>10066329</Item_Primary>
     <Item_Secondary>6710886</Item_Secondary>

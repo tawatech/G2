@@ -1,13 +1,14 @@
-#include "G2BsumotoyRA8875_800x480.h"
+#include "G2BsumotoyRA8875.h"
 
-G2BsumotoyRA8875_800x480::G2BsumotoyRA8875_800x480(RA8875* GlobalTFT)
+G2BsumotoyRA8875::G2BsumotoyRA8875(RA8875* GlobalTFT, enum sumoRA8875sizes s)
 {
     sumoTFT=GlobalTFT;
+	ScreenSize=s;
 }
 
-void G2BsumotoyRA8875_800x480::initBridge()
+void G2BsumotoyRA8875::initBridge()
 {
-    sumoTFT->begin(RA8875_800x480);
+    sumoTFT->begin(ScreenSize);
     sumoTFT->displayOn(true);
     //sumoTFT->GPIOX(true);
     //sumoTFT->PWM1config(true, RA8875_PWM_CLK_DIV1024);
@@ -15,17 +16,17 @@ void G2BsumotoyRA8875_800x480::initBridge()
     sumoTFT->touchBegin();
 }
 
-void G2BsumotoyRA8875_800x480::fillScreen(uint16_t color)
+void G2BsumotoyRA8875::fillScreen(uint16_t color)
 {
     sumoTFT->fillWindow(color);
 }
 
-boolean G2BsumotoyRA8875_800x480::touched(void)
+boolean G2BsumotoyRA8875::touched(void)
 {
    return sumoTFT->_checkInterrupt(2);
 }
 
-boolean G2BsumotoyRA8875_800x480::touchRead(uint16_t *x, uint16_t *y)
+boolean G2BsumotoyRA8875::touchRead(uint16_t *x, uint16_t *y)
 {
   sumoTFT->touchReadAdc(x, y);
   *x=1024-*x;
@@ -35,22 +36,22 @@ boolean G2BsumotoyRA8875_800x480::touchRead(uint16_t *x, uint16_t *y)
   return false;
 }
 
-void    G2BsumotoyRA8875_800x480::DrawFillRect(int16_t XPos,int16_t YPos,int16_t Width,int16_t Height,uint16_t Background)
+void    G2BsumotoyRA8875::DrawFillRect(int16_t XPos,int16_t YPos,int16_t Width,int16_t Height,uint16_t Background)
 {
   sumoTFT->fillRect(XPos, YPos, Width, Height, Background);
 }
 
-void    G2BsumotoyRA8875_800x480::DrawCircle(int16_t XCen,int16_t YCen,int16_t Radius,uint16_t Color)
+void    G2BsumotoyRA8875::DrawCircle(int16_t XCen,int16_t YCen,int16_t Radius,uint16_t Color)
 {
   sumoTFT->drawCircle(XCen+1, YCen+1, Radius, Color);
 }
 
-void    G2BsumotoyRA8875_800x480::DrawFillCircle(int16_t XCen,int16_t YCen,int16_t Radius,uint16_t Color)
+void    G2BsumotoyRA8875::DrawFillCircle(int16_t XCen,int16_t YCen,int16_t Radius,uint16_t Color)
 {
   sumoTFT->fillCircle(XCen+1, YCen+1, Radius, Color);
 }
 
-void    G2BsumotoyRA8875_800x480::DrawRoundedFilledRectangle(int16_t XPos,int16_t YPos,int16_t Width,int16_t Height,int16_t CornerRadius,uint16_t ButtonColor,uint16_t CornersToSkip)
+void    G2BsumotoyRA8875::DrawRoundedFilledRectangle(int16_t XPos,int16_t YPos,int16_t Width,int16_t Height,int16_t CornerRadius,uint16_t ButtonColor,uint16_t CornersToSkip)
 {
     //always draw the fully rounded version, then just fill in the squared corners
     sumoTFT->fillRoundRect(XPos, YPos, Width, Height, CornerRadius, ButtonColor);
@@ -65,7 +66,7 @@ void    G2BsumotoyRA8875_800x480::DrawRoundedFilledRectangle(int16_t XPos,int16_
       
 }
 
-void    G2BsumotoyRA8875_800x480::DrawRoundedRect(int16_t XPos,int16_t YPos,int16_t Width,int16_t Height,int16_t CornerRadius,uint16_t ButtonBorder,uint16_t CornersToSkip)
+void    G2BsumotoyRA8875::DrawRoundedRect(int16_t XPos,int16_t YPos,int16_t Width,int16_t Height,int16_t CornerRadius,uint16_t ButtonBorder,uint16_t CornersToSkip)
 {
   if (CornersToSkip==0)
     sumoTFT->drawRoundRect(XPos, YPos, Width, Height, CornerRadius, ButtonBorder);
@@ -119,7 +120,7 @@ void    G2BsumotoyRA8875_800x480::DrawRoundedRect(int16_t XPos,int16_t YPos,int1
   }
 }
 
-void    G2BsumotoyRA8875_800x480::DrawLine(int16_t XPos,int16_t YPos,int16_t Width,int16_t Height,int16_t LineColor, int16_t LineDirection)
+void    G2BsumotoyRA8875::DrawLine(int16_t XPos,int16_t YPos,int16_t Width,int16_t Height,int16_t LineColor, int16_t LineDirection)
 {
   if (LineDirection>0)
   {
@@ -131,7 +132,7 @@ void    G2BsumotoyRA8875_800x480::DrawLine(int16_t XPos,int16_t YPos,int16_t Wid
   }
 }
 
-void    G2BsumotoyRA8875_800x480::DrawCenteredText(int16_t XPos,int16_t YPos,int16_t Width,int16_t Height,String Text,int16_t TextSize,uint16_t TextColor)
+void    G2BsumotoyRA8875::DrawCenteredText(int16_t XPos,int16_t YPos,int16_t Width,int16_t Height,String Text,int16_t TextSize,uint16_t TextColor)
 {
   sumoTFT->setFont(INT);
   int TextScale=0;
@@ -154,7 +155,7 @@ void    G2BsumotoyRA8875_800x480::DrawCenteredText(int16_t XPos,int16_t YPos,int
   */
 }
 
-void    G2BsumotoyRA8875_800x480::DrawText(int16_t XPos,int16_t YPos,int16_t boxWidth,int16_t boxHeight,String Text,uint16_t TextColor,const tFont *font,int16_t TextEnlarge,int16_t TextAlignment, uint16_t BGColor)
+void    G2BsumotoyRA8875::DrawText(int16_t XPos,int16_t YPos,int16_t boxWidth,int16_t boxHeight,String Text,uint16_t TextColor,const tFont *font,int16_t TextEnlarge,int16_t TextAlignment, uint16_t BGColor)
 {
   int PXwidth,PXHeight;
   if (font==NULL)
@@ -175,7 +176,7 @@ void    G2BsumotoyRA8875_800x480::DrawText(int16_t XPos,int16_t YPos,int16_t box
 
 //private text function to write text based on parameter count methods for either internal, or software fonts, or deprecated method call
 
-void    G2BsumotoyRA8875_800x480::writeText(int16_t XPos,int16_t YPos,int16_t boxWidth,int16_t boxHeight,String Text,uint16_t TextColor,int16_t TextEnlarge,int16_t TextAlignment, int16_t TextWidth, int16_t TextHeight, uint16_t BGColor)
+void    G2BsumotoyRA8875::writeText(int16_t XPos,int16_t YPos,int16_t boxWidth,int16_t boxHeight,String Text,uint16_t TextColor,int16_t TextEnlarge,int16_t TextAlignment, int16_t TextWidth, int16_t TextHeight, uint16_t BGColor)
 {    
     int XPad=0, YPad=0;
 
@@ -201,7 +202,7 @@ void    G2BsumotoyRA8875_800x480::writeText(int16_t XPos,int16_t YPos,int16_t bo
 
 //internal draw functions to replicate functionality in other libraries
 
-void G2BsumotoyRA8875_800x480::drawCircleHelper( int16_t x0, int16_t y0, int16_t r, uint8_t cornername, uint16_t color) 
+void G2BsumotoyRA8875::drawCircleHelper( int16_t x0, int16_t y0, int16_t r, uint8_t cornername, uint16_t color) 
 {
   int16_t f     = 1 - r;
   int16_t ddF_x = 1;

@@ -5,7 +5,7 @@
 	<ClickCommand></ClickCommand>
 	<DeclickCommand></DeclickCommand>
     <Variables>
-		<NumCount>5</NumCount>
+		<NumCount>6</NumCount>
 		<StringCount>0</StringCount>
 		<Parameter>
 			<Type>Number</Type>
@@ -30,16 +30,22 @@
 			<Index>3</Index>
 			<Name>OffColor</Name>
 			<Default>63488</Default>
-		</Parameter>	
+		</Parameter>
 		<Parameter>
 			<Type>Number</Type>
 			<Index>4</Index>
+			<Name>DisabledColor</Name>
+			<Default>#ItemSecondary</Default>
+		</Parameter>		
+		<Parameter>
+			<Type>Number</Type>
+			<Index>5</Index>
 			<Name>Background</Name>
 			<Default>#Screen_Background</Default>
 		</Parameter>
 	</Variables>
     <DrawMethods>
-		<MethodCount>3</MethodCount>
+		<MethodCount>4</MethodCount>
 		<Method>
 			<Designator>Clear</Designator>
 			<Index>0</Index>
@@ -59,6 +65,13 @@
 			<Index>2</Index>
 			<Text>
 				(drawFillCircle,^Width /2,^OffColor
+			</Text>
+		</Method>
+		<Method>
+			<Designator>Disabled</Designator>
+			<Index>3</Index>
+			<Text>
+				(drawFillCircle,^Width /2,^DisabledColor
 			</Text>
 		</Method>
 	</DrawMethods>

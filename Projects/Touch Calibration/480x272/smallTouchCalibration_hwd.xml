@@ -13,6 +13,6 @@
     <TP2Y>163</TP2Y>
     <TP3X>164</TP3X>
     <TP3Y>501</TP3Y>
-    <ScreenWidth>800</ScreenWidth>
-    <ScreenHeight>480</ScreenHeight>
+    <ScreenWidth>480</ScreenWidth>
+    <ScreenHeight>272</ScreenHeight>
 </HardwareConfig>

@@ -1,16 +1,18 @@
-#ifndef _G2BsumotoyRA8875_800x480_H
-#define _G2BsumotoyRA8875_800x480_H
+#ifndef _G2BsumotoyRA8875_H
+#define _G2BsumotoyRA8875_H
 
 #include <SPI.h>
 #include <RA8875.h>
 
 //using sumotoy library it is currently necesary to edit the user settings file to use touchscreen by uncommenting the line '#define USE_RA8875_TOUCH//resistive touch screen'
 //it is also required to change the header to move line 'bool              _checkInterrupt(uint8_t _bit,bool _clear=true);' above the protected statement to allow use of software touch press checking
-class G2BsumotoyRA8875_800x480 {
+//if using adafruit libraries as well, enum for resolutions must be changed also, suggested add sumo prefix to enum type and all sizes on line 139 of RA8875.h -> enum sumoRA8875sizes { 			sumoRA8875_480x272, sumoRA8875_800x480, sumoRA8875_800x480ALT, sumoAdafruit_480x272, sumoAdafruit_800x480 };
+	//additionally line 509, 211 in RA8875 needs sumo prefix added to enum type, corresponding lines 151, and case statements 233-248, and 4726, 5418, 5473
+class G2BsumotoyRA8875 {
 
  public:
-  G2BsumotoyRA8875_800x480(RA8875* GlobalTFT); // Constructor
-
+  G2BsumotoyRA8875(RA8875* GlobalTFT, enum sumoRA8875sizes s); // Constructor
+  enum sumoRA8875sizes ScreenSize;
   //class variables
   RA8875* sumoTFT;
 

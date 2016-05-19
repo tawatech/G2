@@ -1,0 +1,9 @@
+int PointIndex=0;if (PointIndex==1) {@4@.Text="X"+String(@1@.XPos+@1@.Width/2)+" Y"+String(@1@.YPos+@1@.Width/2);@4@.drawByState();@5@.Text="X"+String(@2@.XPos+@2@.Width/2)+" Y"+String(@2@.YPos+@2@.Width/2);@5@.drawByState();@6@.Text="X"+String(@3@.XPos+@3@.Width/2)+" Y"+String(@3@.YPos+@3@.Width/2);@6@.drawByState();@1@.selectiveUpdateState(3);} if (PointIndex==2) {@1@.selectiveUpdateState(1);@2@.selectiveUpdateState(3);} if (PointIndex==3) {@2@.selectiveUpdateState(1);@3@.selectiveUpdateState(3);} if (PointIndex==4){ @3@.selectiveUpdateState(1);PointIndex=0;}
+int X1;
+int X2;
+int X3;
+int Y1;@9@.Text="X"+String(X1)+" Y"+String(Y1);@9@.drawByState();
+int Y2;@10@.Text="X"+String(X2)+" Y"+String(Y2);@10@.drawByState();
+int Y3;@11@.Text="X"+String(X3)+" Y"+String(Y3);@11@.drawByState();
+
+
