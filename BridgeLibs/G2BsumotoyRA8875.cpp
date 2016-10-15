@@ -134,25 +134,12 @@ void    G2BsumotoyRA8875::DrawLine(int16_t XPos,int16_t YPos,int16_t Width,int16
 
 void    G2BsumotoyRA8875::DrawCenteredText(int16_t XPos,int16_t YPos,int16_t Width,int16_t Height,String Text,int16_t TextSize,uint16_t TextColor)
 {
-  sumoTFT->setFont(INT);
   int TextScale=0;
   TextScale=TextSize/10-1;
   if (TextScale<0) TextScale=0;
   int PXwidth=8*Text.length()*(TextScale+1);
   int PXHeight=TextSize*(TextScale+1);
-  writeText(XPos,YPos,Width,Height,Text,TextColor,TextScale,1,PXwidth,PXHeight,0);
-  /*sumoTFT->textMode();  
-
-  sumoTFT->tft.setFontScale(TextScale);
-  sumoTFT->textSetCursor(XPos+XPad, YPos+YPad);
-  sumoTFT->textTransparent(TextColor);
-  char* buf = new char[Text.length()+1];
-  Text.toCharArray(buf, Text.length()+1);
-  sumoTFT->textWrite(buf, Text.length()+1);
-  
-  sumoTFT->textEnlarge(0);
-  sumoTFT->graphicsMode();
-  */
+  writeText(XPos,YPos,Width,Height,Text,TextColor,NULL,TextScale,1,PXwidth,PXHeight,0);
 }
 
 void    G2BsumotoyRA8875::DrawText(int16_t XPos,int16_t YPos,int16_t boxWidth,int16_t boxHeight,String Text,uint16_t TextColor,const tFont *font,int16_t TextEnlarge,int16_t TextAlignment, uint16_t BGColor)
@@ -160,23 +147,21 @@ void    G2BsumotoyRA8875::DrawText(int16_t XPos,int16_t YPos,int16_t boxWidth,in
   int PXwidth,PXHeight;
   if (font==NULL)
   {
-    sumoTFT->setFont(INT);
-    PXwidth=8*(TextEnlarge+1);
-    PXHeight=14*(TextEnlarge+1)*Text.length();
+    PXwidth=8*(TextEnlarge+1)*Text.length();
+    PXHeight=14*(TextEnlarge+1);
   }
   else
   {
-    sumoTFT->setFont(font);
-    PXwidth=font->font_width*Text.length();
-    PXHeight=font->font_height;
+    PXwidth=font->font_width*(TextEnlarge+1)*Text.length();
+    PXHeight=font->font_height*(TextEnlarge+1);
   }
-  
-  writeText(XPos,YPos,boxWidth,boxHeight,Text,TextColor,TextEnlarge,TextAlignment,PXwidth,PXHeight,BGColor);
+
+  writeText(XPos,YPos,boxWidth,boxHeight,Text,TextColor,font,TextEnlarge,TextAlignment,PXwidth,PXHeight,BGColor);
 }
 
 //private text function to write text based on parameter count methods for either internal, or software fonts, or deprecated method call
 
-void    G2BsumotoyRA8875::writeText(int16_t XPos,int16_t YPos,int16_t boxWidth,int16_t boxHeight,String Text,uint16_t TextColor,int16_t TextEnlarge,int16_t TextAlignment, int16_t TextWidth, int16_t TextHeight, uint16_t BGColor)
+void    G2BsumotoyRA8875::writeText(int16_t XPos,int16_t YPos,int16_t boxWidth,int16_t boxHeight,String Text,uint16_t TextColor,const tFont *font,int16_t TextEnlarge,int16_t TextAlignment, int16_t TextWidth, int16_t TextHeight, uint16_t BGColor)
 {    
     int XPad=0, YPad=0;
 
@@ -194,6 +179,10 @@ void    G2BsumotoyRA8875::writeText(int16_t XPos,int16_t YPos,int16_t boxWidth,i
     }   
     YPad=(boxHeight-TextHeight)/2;
     //Text=Text+'\0'; //seems to help stop over-run printing background
+    if (font==NULL)
+      sumoTFT->setFont(INT);
+    else
+      sumoTFT->setFont(font);
     sumoTFT->setFontScale(TextEnlarge);
     sumoTFT->setCursor(XPos+XPad,YPos+YPad);
     sumoTFT->setTextColor(TextColor,BGColor);

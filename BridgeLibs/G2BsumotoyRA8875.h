@@ -34,7 +34,7 @@ class G2BsumotoyRA8875 {
 //internal draw functions to replicate functionality in other libraries
 private:
   void    drawCircleHelper( int16_t x0, int16_t y0, int16_t r, uint8_t cornername, uint16_t color);
-  void    writeText(int16_t XPos,int16_t YPos,int16_t boxWidth,int16_t boxHeight,String Text,uint16_t TextColor,int16_t TextEnlarge,int16_t TextAlignment,int16_t TextWidth, int16_t TextHeight,uint16_t BGColor);
+  void    writeText(int16_t XPos,int16_t YPos,int16_t boxWidth,int16_t boxHeight,String Text,uint16_t TextColor,const tFont *font,int16_t TextEnlarge,int16_t TextAlignment,int16_t TextWidth, int16_t TextHeight,uint16_t BGColor);
  
 };
 
